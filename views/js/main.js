@@ -406,13 +406,14 @@ var resizePizzas = function(size) {
   function changeSliderLabel(size) {
     switch(size) {
       case "1":
-        document.querySelector("#pizzaSize").innerHTML = "Small";
+        document.getElementsByClassName("#pizzaSize").innerHTML = "Small";
+        // Change querySelectorAll to getElementsByClassName
         return;
       case "2":
-        document.querySelector("#pizzaSize").innerHTML = "Medium";
+        document.getElementsByClassName("#pizzaSize").innerHTML = "Medium";
         return;
       case "3":
-        document.querySelector("#pizzaSize").innerHTML = "Large";
+        document.getElementsByClassName("#pizzaSize").innerHTML = "Large";
         return;
       default:
         console.log("bug in changeSliderLabel");
@@ -492,6 +493,7 @@ function updatePositions() {
   var items = document.querySelectorAll('.mover');
   // Previous code caused layout thrashing. Here I refactored the code to read on scroll here
   var scroll = document.body.scrollTop;
+  // cache items.lenght out of for loop
   var itemsLength = items.length;
   // var five = [0,1,2,3,4];
   for (var i = 0; i < itemsLength; i++) {
@@ -518,17 +520,16 @@ window.addEventListener('scroll', updatePositions);
 
 // Generates the sliding pizzas when the page loads.
 document.addEventListener('DOMContentLoaded', function() {
-  var cols = 8;
-  var s = 256;
-  // reduced the number of pizzas down from 200 to 30
-  for (var i = 0; i < 40; i++) {
+
+  // reduced the number of pizzas down from 200 to 35
+  for (var i = 0; i < 35; i++) {
     var elem = document.createElement('img');
     elem.className = 'mover';
     elem.src = "images/pizza.png";
     elem.style.height = "100px";
     elem.style.width = "73.333px";
-    elem.basicLeft = (i % cols) * s;
-    elem.style.top = (Math.floor(i / cols) * s) + 'px';
+    elem.basicLeft = (i % 8) * 256;
+    elem.style.top = (Math.floor(i / 8) * 256) + 'px';
     //querySelectorAll is replaced by getElementById
     document.getElementById("movingPizzas1").appendChild(elem);
   }
