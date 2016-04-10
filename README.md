@@ -1,8 +1,7 @@
 ## Udacity Front-end Nanodegree
 
-Website performance Optimization Project.
+This is my submission for project 5 of the Front-end Nanodegree, Website performance Optimization Project.
 
-This is the submission for project 5 of the Front-end Nanodegree, website performance optimization.
 
 ## My submission for this project:
 
@@ -28,10 +27,17 @@ This is the submission for project 5 of the Front-end Nanodegree, website perfor
 
 The details of edits can be found in the comments for src/index.html, src/views/pizza.html and src/views/js/main.js.
 
-The project is split into two files, src which consists of readable code with comments, and dist which includes minified files. Both include package.json and gulp.js.
+The project is split into two files, src which consists of readable code with comments, and dist which includes minified files. Both include package.json and gulp.js. The node
 
-To run the project:
+### To run the project:
 
 1. Git clone the project using the url https://github.com/JimRhead/frontend-nanodegree-mobile-portfolio.git,
 1. Open folder labeled dist,
 1. Open index.html using your browser of choice.
+
+### To run the grunt.js task runner:
+
+1. Ensure you have Node installed first. https://nodejs.org/en/download/,
+1. After you have cloned this project, open your terminal and go to frontend-nanodegree-mobile-portfolio/src,
+1. Run 'npm install'. This will install the grunt task runner based on the dependencies in package.json,
+1. Run 'grunt'.
