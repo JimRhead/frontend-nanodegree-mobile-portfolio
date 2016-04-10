@@ -27,7 +27,7 @@ This is my submission for project 5 of the Front-end Nanodegree, Website perform
 
 The details of edits can be found in the comments for src/index.html, src/views/pizza.html and src/views/js/main.js (comments 401 onwards).
 
-The project is split into two files, src which consists of readable code with comments, and dist which includes minified files. Both include package.json and gulp.js.
+The project is split into two files, src which consists of readable code with comments, and dist which includes minified files. Both include package.json and Gruntfile.js.
 
 ### To run the project:
 
@@ -35,7 +35,7 @@ The project is split into two files, src which consists of readable code with co
 1. Open folder labeled dist,
 1. Open index.html using your browser of choice.
 
-### To run the grunt.js task runner:
+### To run the Gruntfile.js task runner:
 
 1. Ensure you have Node installed first. https://nodejs.org/en/download/,
 1. After you have cloned this project, open your terminal and go to frontend-nanodegree-mobile-portfolio/src,

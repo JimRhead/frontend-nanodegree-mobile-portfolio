@@ -6,7 +6,7 @@ module.exports = function(grunt) {
     uglify: {
       build: {
         src: 'views/js/main.js',
-        dest: 'views/dist/main.min.js'
+        dest: 'views/js/main.min.js'
       }
     }
   });
