@@ -21,7 +21,7 @@ This is my submission for project 5 of the Front-end Nanodegree, Website perform
 
 ### Edits made to views/js/main.js:
 
-1. changePizzaSizes now alters to percentage width with additional variables defined outside for loop,
+1. changePizzaSizes now alters to percentage width with dx removed. Additional variables also defined outside for loop,
 1. updatePositions no longer does a forced synchronous layout, with small edits changing querySelectorAll and caching items.length outside the for loop.
 1.  Moving pizzas in background are reduced from 200 to 35, querySelectorAll is changed to getElementById and positions are updated through requestAnimationFrame.
 
