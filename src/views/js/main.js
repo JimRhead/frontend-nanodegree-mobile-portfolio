@@ -421,7 +421,7 @@ var resizePizzas = function(size) {
 
   changeSliderLabel(size);
 
-      // Changed the slider value to a percent width
+      // refactored code to not require dx, instead to alters pizza sizes based on slider and width entierly
     function changePizzaSizes (size) {
       switch(size) {
         case "1":
@@ -436,12 +436,12 @@ var resizePizzas = function(size) {
         default:
           console.log("bug in sizeSwitcher");
       }
-      //Changed querySelectorAll to getElementsByClassName
+      //Declared document.querySelectorAll(".randomPizzaContainer") as a variable and changed querySelectorAll to getElementsByClassName
      var docPaint = document.getElementsByClassName('randomPizzaContainer');
      //docPaint.length and i defined outside the for loop
      var docPaintLength = docPaint.length;
      var i = 0;
-     //declare changeWidth as a variable outside for loop
+     //declare changeWidth as a variable outside for loop. Percent also added to newWidth to account for changes to changePizzaSizes
      var changeWidth = newWidth + '%';
      for (; i < docPaintLength; i++) {
              docPaint[i].style.width = changeWidth;

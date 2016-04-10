@@ -25,7 +25,7 @@ This is my submission for project 5 of the Front-end Nanodegree, Website perform
 1. updatePositions no longer does a forced synchronous layout, with small edits changing querySelectorAll and caching items.length outside the for loop.
 1.  Moving pizzas in background are reduced from 200 to 35, querySelectorAll is changed to getElementById and positions are updated through requestAnimationFrame.
 
-The details of edits can be found in the comments for src/index.html, src/views/pizza.html and src/views/js/main.js.
+The details of edits can be found in the comments for src/index.html, src/views/pizza.html and src/views/js/main.js (comments 401 onwards).
 
 The project is split into two files, src which consists of readable code with comments, and dist which includes minified files. Both include package.json and gulp.js.
 
@@ -41,3 +41,7 @@ The project is split into two files, src which consists of readable code with co
 1. After you have cloned this project, open your terminal and go to frontend-nanodegree-mobile-portfolio/src,
 1. Run 'npm install'. This will install the grunt task runner based on the dependencies in package.json,
 1. Run 'grunt'.
+
+
+Author: James Rhead
+LinkedIn: https://uk.linkedin.com/in/jamesrhead
