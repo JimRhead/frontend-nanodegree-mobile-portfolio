@@ -441,6 +441,7 @@ var resizePizzas = function(size) {
      //docPaint.length and i defined outside the for loop
      var docPaintLength = docPaint.length;
      var i = 0;
+     //declare changeWidth as a variable outside for loop
      var changeWidth = newWidth + '%';
      for (; i < docPaintLength; i++) {
              docPaint[i].style.width = changeWidth;
