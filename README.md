@@ -27,7 +27,7 @@ This is my submission for project 5 of the Front-end Nanodegree, Website perform
 
 The details of edits can be found in the comments for src/index.html, src/views/pizza.html and src/views/js/main.js.
 
-The project is split into two files, src which consists of readable code with comments, and dist which includes minified files. Both include package.json and gulp.js. The node
+The project is split into two files, src which consists of readable code with comments, and dist which includes minified files. Both include package.json and gulp.js.
 
 ### To run the project:
 
