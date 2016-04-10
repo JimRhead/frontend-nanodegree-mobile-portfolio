@@ -398,7 +398,7 @@ var pizzaElementGenerator = function(i) {
   return pizzaContainer;
 }
 
-// PLEASE NOTE - all comments from this point are alterations made to the code.
+// NOTE - all comments from this point are alterations made to the code.
 
 var resizePizzas = function(size) {
   window.performance.mark("mark_start_resize");
@@ -406,14 +406,13 @@ var resizePizzas = function(size) {
   function changeSliderLabel(size) {
     switch(size) {
       case "1":
-        document.getElementsByClassName("#pizzaSize").innerHTML = "Small";
-        // Change querySelectorAll to getElementsByClassName
+        document.querySelector("#pizzaSize").innerHTML = "Small";
         return;
       case "2":
-        document.getElementsByClassName("#pizzaSize").innerHTML = "Medium";
+        document.querySelector("#pizzaSize").innerHTML = "Medium";
         return;
       case "3":
-        document.getElementsByClassName("#pizzaSize").innerHTML = "Large";
+        document.querySelector("#pizzaSize").innerHTML = "Large";
         return;
       default:
         console.log("bug in changeSliderLabel");
@@ -437,11 +436,14 @@ var resizePizzas = function(size) {
         default:
           console.log("bug in sizeSwitcher");
       }
-
-     var docPaint = document.querySelectorAll(".randomPizzaContainer");
-
-     for (var i = 0; i < docPaint.length; i++) {
-             docPaint[i].style.width = newWidth + '%';
+      //Changed querySelectorAll to getElementsByClassName
+     var docPaint = document.getElementsByClassName('randomPizzaContainer');
+     //docPaint.length and i defined outside the for loop
+     var docPaintLength = docPaint.length;
+     var i = 0;
+     var changeWidth = newWidth + '%';
+     for (; i < docPaintLength; i++) {
+             docPaint[i].style.width = changeWidth;
      }
    }
 
@@ -484,10 +486,11 @@ function updatePositions() {
   frame++;
   window.performance.mark("mark_start_frame");
 
-  var items = document.querySelectorAll('.mover');
+  // Change querySelectorAll to getElementsByClassName
+  var items = document.getElementsByClassName('mover');
   // Previous code caused layout thrashing. Here I refactored the code to read on scroll here
   var scroll = document.body.scrollTop;
-  // cache items.lenght out of for loop
+  // cache items.length out of for loop
   var itemsLength = items.length;
     for (var i = 0; i < itemsLength; i++) {
     var phase = Math.sin((scroll / 1250) + (i % 5));
